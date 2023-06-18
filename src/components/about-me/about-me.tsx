@@ -1,10 +1,10 @@
 import * as React from "react";
 import { PureComponent } from "react";
 
-import "./about-me.styl";
+import css from "./about-me.module.css";
 
 export default class AboutMe extends PureComponent {
   render() {
-    return <section>About Me</section>;
+    return <section className={css.aboutMe}>About Me</section>;
   }
 }

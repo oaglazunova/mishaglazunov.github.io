@@ -1,10 +1,10 @@
 import * as React from "react";
 import { PureComponent } from "react";
 
-import "./contacts.styl";
+import css from "./contacts.module.css";
 
 export default class contacts extends PureComponent {
   render() {
-    return <section>Contacts</section>;
+    return <section className={css.contacts}>Contacts</section>;
   }
 }

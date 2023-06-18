@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
+
+import "./index.css";
 
 const cnRoot = document.getElementById("root") as HTMLElement;
 //if (!cnRoot) throw new Error("Failed to find the root element");

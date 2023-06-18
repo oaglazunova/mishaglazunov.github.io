@@ -1,10 +1,10 @@
 import * as React from "react";
 import { PureComponent } from "react";
 
-import "./additional-info.styl";
+import css from "./additional-info.module.css";
 
 export default class AdditionalInfo extends PureComponent {
   render() {
-    return <section>Additional Info</section>;
+    return <section className={css.additionalInfo}>Additional Info</section>;
   }
 }
