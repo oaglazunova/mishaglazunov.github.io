@@ -19,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:tsc": "tsc -p tsconfig.test.json -w"
+    "test:tsc": "tsc -p tsconfig.test.json -w",
+    "prettier": "prettier --list-different  ./src/**/*.{ts,tsx,js,jsx}",
+    "prettier:fix": "prettier --write \"./src/**/*.{ts,tsx,js,jsx}\""
   },
   "eslintConfig": {
     "extends": [
