@@ -11,17 +11,25 @@ import Footer from "../footer/footer";
 import css from "./App.module.css";
 
 function App() {
-  return (
-    <div className={css.container}>
-      <Header />
-      <AboutMe />
-      <AdditionalInfo />
-      <Resume />
-      <Publications />
-      <Contacts />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className={css.container}>
+			<Header />
+			<AboutMe />
+			<AdditionalInfo />
+			<Resume />
+			<Publications />
+			<Contacts />
+			<Footer />
+
+			<button
+				className={css.backToTop}
+				// onClick={this.backToTop}
+				aria-label="Back to top"
+			>
+				<span className={css.arrow} />
+			</button>
+		</div>
+	);
 }
 
 export default App;

@@ -1,3 +1,91 @@
+/*create css variable for black color*/
+:root {
+	--background-color: #fff;
+
+	/*text */
+	--font-color: #000;
+	--link-color: darkcyan;
+	--header-color: darkslategray;
+	--strong-color: darkslategray;
+
+	/* accents */
+	--primary-color: #00a6d6;
+	--secondary-color: #ec6842;
+	--tertiary-color: #f5f5f5;
+
+	/* neutrals */
+	--neutral-color: #f5f5f5;
+	--neutral-color-light: #f5f5f5;
+
+	/* surface */
+	--surface-color-dim: #fff;
+	--surface-color: #fff;
+	--surface-color-bright: #fff;
+	--surface-color-container-lowest: #fff;
+	--surface-color-container-low: #070707;
+	--surface-color-container: #070707;
+	--surface-color-container-high: #070707;
+	--surface-color-container-highest: #070707;
+
+	/* error */
+	--error-color: #ff0000;
+
+	/*
+  {
+  "Primary": {
+    "50": "#dff3f8",
+    "100": "#ade0ef",
+    "200": "#78cbe5",
+    "300": "#42b6db",
+    "400": "#00a8d6",
+    "500": "#0099d1",
+    "600": "#008cc4",
+    "700": "#007ab2",
+    "800": "#006a9e",
+    "900": "#004b80"
+  },
+  "Secondary": {
+    "50": "#f8e7e6",
+    "100": "#f8c8ba",
+    "200": "#f3a58e",
+    "300": "#ef8263",
+    "400": "#ec6742",
+    "500": "#e94d23",
+    "600": "#df4720",
+    "700": "#d2411b",
+    "800": "#c33a18",
+    "900": "#ab2e0f"
+  }
+}
+*/
+}
+
+a {
+	color: var(--link-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--header-color);
+}
+
+strong,
+em {
+	color: var(--strong-color);
+}
+
+button {
+	background-color: var(--primary-color);
+	color: var(--background-color);
+}
+
 .container {
-  border: 5px solid black;
+	padding: 5px;
+	background-color: var(--background-color);
+	color: var(--font-color);
+	font-family: "Roboto", "Arial", sans-serif;
 }
