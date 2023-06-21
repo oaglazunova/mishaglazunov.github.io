@@ -7,7 +7,7 @@ import css from "./header.module.css";
 export default class Header extends PureComponent {
 	render() {
 		return (
-			<header className={css.container}>
+			<header className={css.container} id="header">
 				<h1>Misha Glazunov</h1>
 				<span>Scientist & AI Specialist</span>
 				<Social />

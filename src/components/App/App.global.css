@@ -1,0 +1,129 @@
+/*create css variable for black color*/
+:root {
+	--background-color: #f0e9e7;
+
+	/*text */
+	--font-color: #272629;
+	--font-color-secondary: #757575;
+	/*	--link-color: darkcyan;
+	--header-color: darkslategray;
+	--strong-color: darkslategray; 
+
+	--divider-color: #bdbdbd;*/
+
+	/* accents 
+	--primary-color-dark: #0288d1;
+	--primary-color: #03a9f4; /* top bar
+	--primary-color-light: #b3e5fc;
+	--accent-color: #f4511e; /* Floating action buttons, Selection controls (like sliders and switches), Highlighting selected text, Progress bars, Links and headlines 
+	*/
+	/* buttons
+	--buttons-text-color: #fff;  */
+
+	/* error */
+	--error-color: #b00020;
+	--button-letter-spacing: 0.5px;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #272629;
+
+		/*text */
+		--font-color: #f0e9e7;
+	}
+}
+
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--accent-color);
+}
+*/
+
+* {
+	/* transition: transform 0.2s ease-in-out; */
+	box-sizing: border-box;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 96px;
+	font-weight: lighter;
+	letter-spacing: -1.5px;
+}
+
+h2 {
+	font-size: 60px;
+	font-weight: lighter;
+	letter-spacing: -0.5px;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 200px;
+		height: 2px;
+		background-color: var(--font-color);
+		mask-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0)
+		);
+	}
+}
+
+h3 {
+	font-size: 48px;
+	letter-spacing: 0;
+}
+
+h4 {
+	font-size: 34px;
+	letter-spacing: 0.25px;
+}
+
+li {
+	list-style-type: square;
+}
+
+a {
+	/* color: var(--accent-color); */
+	color: var(--font-color);
+
+	&:visited {
+		color: var(--font-color-secondary);
+	}
+}
+
+.button {
+	padding: 10px 20px;
+	font-size: inherit;
+	letter-spacing: var(--button-letter-spacing);
+
+	&:active {
+		transform: translateY(2px);
+	}
+}
+
+.button-primary {
+	background-color: var(--font-color);
+	border: 1px solid var(--font-color);
+	color: var(--background-color);
+}
+
+.button-secondary {
+	background-color: var(--background-color);
+	border: 1px solid var(--font-color);
+}

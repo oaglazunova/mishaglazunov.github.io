@@ -4,7 +4,11 @@ import { PureComponent } from "react";
 import css from "./additional-info.module.css";
 
 export default class AdditionalInfo extends PureComponent {
-  render() {
-    return <section className={css.additionalInfo}>Additional Info</section>;
-  }
+	render() {
+		return (
+			<section className={css.container} id="additional-info">
+				Additional Info
+			</section>
+		);
+	}
 }

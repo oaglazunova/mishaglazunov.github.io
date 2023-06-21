@@ -9,7 +9,7 @@ import css from "./resume.module.css";
 export default class Resume extends PureComponent {
 	render() {
 		return (
-			<section className={css.container}>
+			<section className={css.container} id="resume">
 				<h2>Resume</h2>
 
 				<div>
@@ -21,6 +21,9 @@ export default class Resume extends PureComponent {
 					<h3>Experience</h3>
 					<Timeline />
 				</div>
+
+				<button className="button  button-primary">Download CV</button>
+				<button className="button  button-secondary">Download CV</button>
 			</section>
 		);
 	}
