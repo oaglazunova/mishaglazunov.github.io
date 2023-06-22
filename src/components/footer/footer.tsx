@@ -10,7 +10,7 @@ export default class Footer extends PureComponent {
 			<footer className={css.container}>
 				<h3>Misha Glazunov</h3>
 				<Social />
-				<div>
+				<div className={css.copyright}>
 					© Copyright <strong>Misha Glazunov</strong>. All Rights Reserved.
 					Photo by{" "}
 					<a

@@ -1,29 +1,43 @@
 import * as React from "react";
+import * as classnames from "classnames";
 import { PureComponent } from "react";
 
 import css from "./nav.module.css";
 
-export default class Nav extends PureComponent {
+type NavProps = {
+	isOpened: boolean;
+};
+
+export default class Nav extends PureComponent<NavProps> {
 	render() {
+		const { isOpened } = this.props;
+
 		return (
-			<nav className={css.container}>
+			<nav
+				className={classnames(css.container, {
+					[css.container_opened]: isOpened,
+				})}
+			>
 				<a href="#header" className={css.link}>
-					Home
+					<span>Home</span>
 				</a>
 				<a href="#about-me" className={css.link}>
-					About me
+					<span>About me</span>
 				</a>
-				<a href="#additional-info" className={css.link}>
-					Additional info
+				<a
+					href="#additional-info"
+					className={classnames(css.link, css.link_active)}
+				>
+					<span>Additional info</span>
 				</a>
 				<a href="#resume" className={css.link}>
-					Resume
+					<span>Resume</span>
 				</a>
 				<a href="#publications" className={css.link}>
-					Publications
+					<span>Publications</span>
 				</a>
 				<a href="#contacts" className={css.link}>
-					Contacts
+					<span>Contacts</span>
 				</a>
 			</nav>
 		);

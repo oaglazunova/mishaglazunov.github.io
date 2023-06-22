@@ -1,5 +1,21 @@
 .container {
+	position: relative;
 	text-align: center;
+	border-top: 3px solid var(--font-color);
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 5px;
+		left: 0;
+		background-color: var(--font-color);
+	}
+}
+
+.copyright {
+	padding: 10px 0;
 	background-color: var(--font-color);
 	color: var(--background-color);
 }
