@@ -45,6 +45,10 @@
 	}
 }
 
+.link > span {
+	pointer-events: none;
+}
+
 .link_active {
 	background-color: var(--background-color);
 	color: var(--font-color);

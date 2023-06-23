@@ -18,28 +18,50 @@ export default class Nav extends PureComponent<NavProps> {
 					[css.container_opened]: isOpened,
 				})}
 			>
-				<a href="#header" className={css.link}>
+				<a href="#header" className={css.link} onClick={this.toggleActiveLink}>
 					<span>Home</span>
 				</a>
-				<a href="#about-me" className={css.link}>
+				<a
+					href="#about-me"
+					className={css.link}
+					onClick={this.toggleActiveLink}
+				>
 					<span>About me</span>
 				</a>
 				<a
 					href="#additional-info"
-					className={classnames(css.link, css.link_active)}
+					className={css.link}
+					onClick={this.toggleActiveLink}
 				>
 					<span>Additional info</span>
 				</a>
-				<a href="#resume" className={css.link}>
+				<a href="#resume" className={css.link} onClick={this.toggleActiveLink}>
 					<span>Resume</span>
 				</a>
-				<a href="#publications" className={css.link}>
+				<a
+					href="#publications"
+					className={css.link}
+					onClick={this.toggleActiveLink}
+				>
 					<span>Publications</span>
 				</a>
-				<a href="#contacts" className={css.link}>
+				<a
+					href="#contacts"
+					className={css.link}
+					onClick={this.toggleActiveLink}
+				>
 					<span>Contacts</span>
 				</a>
 			</nav>
 		);
 	}
+
+	private toggleActiveLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		const target = e.target as HTMLAnchorElement;
+		const activeLink = document.querySelector(`.${css.link_active}`);
+		if (activeLink) {
+			activeLink.classList.remove(css.link_active);
+		}
+		target.classList.add(css.link_active);
+	};
 }

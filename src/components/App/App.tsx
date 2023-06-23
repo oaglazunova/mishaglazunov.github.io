@@ -35,7 +35,7 @@ export default class App extends PureComponent<AppState> {
 					className={classnames(css.menuBurger, {
 						[css.menuBurger_cross]: isNavOpened,
 					})}
-					aria-label="Main menu"
+					aria-label="Open main menu"
 					onClick={this.toggleNav}
 				>
 					<span></span>
@@ -65,7 +65,7 @@ export default class App extends PureComponent<AppState> {
 		);
 	}
 
-	private toggleNav = () => {
+	private toggleNav = (e: React.MouseEvent<HTMLButtonElement>) => {
 		this.setState({
 			isNavOpened: !this.state.isNavOpened,
 		});

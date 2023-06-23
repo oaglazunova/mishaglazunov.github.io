@@ -6,9 +6,6 @@
 }
 
 .container_withOpenedNav {
-	height: 100vh;
-	overflow: hidden;
-
 	&::after {
 		content: "";
 		position: fixed;
