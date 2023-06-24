@@ -36,6 +36,24 @@
 	border-radius: 50px;
 	overflow: hidden;
 
+	&:hover {
+		background-color: var(--background-color);
+		color: var(--font-color);
+
+		&:visited {
+			color: var(--font-color);
+		}
+	}
+
+	&:active {
+		background-color: var(--background-color);
+		color: var(--font-color);
+
+		&:visited {
+			color: var(--font-color);
+		}
+	}
+
 	&:visited {
 		color: var(--background-color);
 	}
@@ -47,13 +65,4 @@
 
 .link > span {
 	pointer-events: none;
-}
-
-.link_active {
-	background-color: var(--background-color);
-	color: var(--font-color);
-
-	&:visited {
-		color: var(--font-color);
-	}
 }

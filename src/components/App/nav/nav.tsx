@@ -6,11 +6,12 @@ import css from "./nav.module.css";
 
 type NavProps = {
 	isOpened: boolean;
+	toggleActiveLink: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 export default class Nav extends PureComponent<NavProps> {
 	render() {
-		const { isOpened } = this.props;
+		const { isOpened, toggleActiveLink } = this.props;
 
 		return (
 			<nav
@@ -18,50 +19,29 @@ export default class Nav extends PureComponent<NavProps> {
 					[css.container_opened]: isOpened,
 				})}
 			>
-				<a href="#header" className={css.link} onClick={this.toggleActiveLink}>
+				<a href="#header" className={css.link} onClick={toggleActiveLink}>
 					<span>Home</span>
 				</a>
-				<a
-					href="#about-me"
-					className={css.link}
-					onClick={this.toggleActiveLink}
-				>
+				<a href="#about-me" className={css.link} onClick={toggleActiveLink}>
 					<span>About me</span>
 				</a>
 				<a
 					href="#additional-info"
 					className={css.link}
-					onClick={this.toggleActiveLink}
+					onClick={toggleActiveLink}
 				>
 					<span>Additional info</span>
 				</a>
-				<a href="#resume" className={css.link} onClick={this.toggleActiveLink}>
+				<a href="#resume" className={css.link} onClick={toggleActiveLink}>
 					<span>Resume</span>
 				</a>
-				<a
-					href="#publications"
-					className={css.link}
-					onClick={this.toggleActiveLink}
-				>
+				<a href="#publications" className={css.link} onClick={toggleActiveLink}>
 					<span>Publications</span>
 				</a>
-				<a
-					href="#contacts"
-					className={css.link}
-					onClick={this.toggleActiveLink}
-				>
+				<a href="#contacts" className={css.link} onClick={toggleActiveLink}>
 					<span>Contacts</span>
 				</a>
 			</nav>
 		);
 	}
-
-	private toggleActiveLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		const target = e.target as HTMLAnchorElement;
-		const activeLink = document.querySelector(`.${css.link_active}`);
-		if (activeLink) {
-			activeLink.classList.remove(css.link_active);
-		}
-		target.classList.add(css.link_active);
-	};
 }

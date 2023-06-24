@@ -1,5 +1,9 @@
 import * as React from "react";
 import { PureComponent } from "react";
+import * as SvgTwitter from "../img/svg/twitter.svg";
+import * as SvgLinkedIn from "../img/svg/linkedin.svg";
+import * as SvgGitHub from "../img/svg/github.svg";
+import * as SvgScholar from "../img/svg/scholar.svg";
 
 import css from "./about-me.module.css";
 
@@ -8,16 +12,32 @@ export default class AboutMe extends PureComponent {
 		return (
 			<section className={css.container} id="about-me">
 				<h2>About me</h2>
-				<span>Scientist & AI Specialist</span>
+				<span>PhD Candidate</span>
 				<ul>
 					<li>CV: [PDF]</li>
-					<li>Website: mishaglazunov.github.io</li>
-					<li>Email: mikhail.glazunoff@gmail.com</li>
+					<li>
+						Website:{" "}
+						<a href="mishaglazunov.github.io">mishaglazunov.github.io</a>
+					</li>
+					<li>
+						Email:{" "}
+						<a href="mailto:mikhail.glazunoff@gmail.com">
+							mikhail.glazunoff@gmail.com
+						</a>
+					</li>
 					<li>City: Maastricht, the Netherlands</li>
-					<li>scholar: Scholar</li>
-					<li>github: GitHub</li>
-					<li>twitter: Twitter</li>
-					<li>linkedin: LinkedIn</li>
+					<li>
+						<SvgScholar />: <a href="mishaglazunov.github.io">Scholar</a>
+					</li>
+					<li>
+						<SvgGitHub />: <a href="mishaglazunov.github.io">GitHub</a>
+					</li>
+					<li>
+						<SvgTwitter />: <a href="mishaglazunov.github.io">Twitter</a>
+					</li>
+					<li>
+						<SvgLinkedIn />: <a href="mishaglazunov.github.io">LinkedIn</a>
+					</li>
 				</ul>
 				<div>
 					Misha Glazunov is a PhD student at the Delft University of Technology.

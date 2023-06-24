@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactComponent as SvgTwitter } from "./svg/twitter.svg";
-import { ReactComponent as SvgLinkedIn } from "./svg/linkedin.svg";
-import { ReactComponent as SvgGitHub } from "./svg/github.svg";
-import { ReactComponent as SvgScholar } from "./svg/scholar.svg";
+import { ReactComponent as SvgTwitter } from "../img/svg/twitter.svg";
+import { ReactComponent as SvgLinkedIn } from "../img/svg/linkedin.svg";
+import { ReactComponent as SvgGitHub } from "../img/svg/github.svg";
+import { ReactComponent as SvgScholar } from "../img/svg/scholar.svg";
 
 const data = [
 	{

@@ -41,7 +41,10 @@ export default class App extends PureComponent<AppState> {
 					<span></span>
 				</button>
 
-				<Nav isOpened={this.state.isNavOpened} />
+				<Nav
+					isOpened={this.state.isNavOpened}
+					toggleActiveLink={this.toggleActiveLink}
+				/>
 
 				<Header />
 				<div className={css.content}>
@@ -68,6 +71,19 @@ export default class App extends PureComponent<AppState> {
 	private toggleNav = (e: React.MouseEvent<HTMLButtonElement>) => {
 		this.setState({
 			isNavOpened: !this.state.isNavOpened,
+		});
+	};
+
+	private toggleActiveLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		/* 
+		const target = e.target as HTMLAnchorElement;
+		const activeLink = document.querySelector(`.${css.link_active}`);
+		if (activeLink) {
+			activeLink.classList.remove(css.link_active);
+		}
+		target.classList.add(css.link_active); */
+		this.setState({
+			isNavOpened: false,
 		});
 	};
 }
