@@ -1,11 +1,15 @@
 import * as React from "react";
 import { PureComponent } from "react";
-import * as SvgTwitter from "../img/svg/twitter.svg";
-import * as SvgLinkedIn from "../img/svg/linkedin.svg";
-import * as SvgGitHub from "../img/svg/github.svg";
-import * as SvgScholar from "../img/svg/scholar.svg";
+
+import data from "./about-me.fixture.js";
 
 import css from "./about-me.module.css";
+
+type TAboutMeData = {
+	name: string;
+	link: string;
+	icon: string;
+};
 
 export default class AboutMe extends PureComponent {
 	render() {
@@ -13,7 +17,7 @@ export default class AboutMe extends PureComponent {
 			<section className={css.container} id="about-me">
 				<h2>About me</h2>
 				<span>PhD Candidate</span>
-				<ul>
+				<ul className={css.list}>
 					<li>CV: [PDF]</li>
 					<li>
 						Website:{" "}
@@ -26,18 +30,8 @@ export default class AboutMe extends PureComponent {
 						</a>
 					</li>
 					<li>City: Maastricht, the Netherlands</li>
-					<li>
-						<SvgScholar />: <a href="mishaglazunov.github.io">Scholar</a>
-					</li>
-					<li>
-						<SvgGitHub />: <a href="mishaglazunov.github.io">GitHub</a>
-					</li>
-					<li>
-						<SvgTwitter />: <a href="mishaglazunov.github.io">Twitter</a>
-					</li>
-					<li>
-						<SvgLinkedIn />: <a href="mishaglazunov.github.io">LinkedIn</a>
-					</li>
+
+					{data.map(this.renderItems)}
 				</ul>
 				<div>
 					Misha Glazunov is a PhD student at the Delft University of Technology.
@@ -46,6 +40,17 @@ export default class AboutMe extends PureComponent {
 					a scientist and a researcher.
 				</div>
 			</section>
+		);
+	}
+
+	private renderItems(item: TAboutMeData, index: number) {
+		return (
+			<li key={index}>
+				{item.icon}:{" "}
+				<a className={css.link} href={item.link}>
+					{item.name}
+				</a>
+			</li>
 		);
 	}
 }

@@ -4,12 +4,12 @@ import { PureComponent } from "react";
 
 import css from "./nav.module.css";
 
-type NavProps = {
+type TNavProps = {
 	isOpened: boolean;
 	toggleActiveLink: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
-export default class Nav extends PureComponent<NavProps> {
+export default class Nav extends PureComponent<TNavProps> {
 	render() {
 		const { isOpened, toggleActiveLink } = this.props;
 

@@ -1,2 +1,6 @@
 .container {
 }
+
+.container svg {
+	height: 20px;
+}
