@@ -1,5 +1,6 @@
 .container {
 	position: relative;
+	width: 100vw;
 	text-align: center;
 	border-top: 3px solid var(--font-color);
 

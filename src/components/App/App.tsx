@@ -1,10 +1,11 @@
 import * as React from "react";
 import { PureComponent } from "react";
 import * as classnames from "classnames";
+import animateScrollTo from "animated-scroll-to";
+
 import Nav from "./nav/nav";
 import Header from "../header/header";
 import AboutMe from "../about-me/about-me";
-import AdditionalInfo from "../additional-info/additional-info";
 import Resume from "../resume/resume";
 import Publications from "../publications/publications";
 import Contacts from "../contacts/contacts";
@@ -49,7 +50,6 @@ export default class App extends PureComponent<AppState> {
 				<Header />
 				<div className={css.content}>
 					<AboutMe />
-					<AdditionalInfo />
 					<Resume />
 					<Publications />
 					<Contacts />
@@ -82,8 +82,20 @@ export default class App extends PureComponent<AppState> {
 			activeLink.classList.remove(css.link_active);
 		}
 		target.classList.add(css.link_active); */
+
+		const sectionName = (e.target as HTMLAnchorElement).getAttribute("href");
+
 		this.setState({
 			isNavOpened: false,
 		});
+
+		if (sectionName !== null) {
+			animateScrollTo(
+				document.getElementById(sectionName.substring(1)) as HTMLElement,
+				{
+					speed: 500,
+				}
+			);
+		}
 	};
 }

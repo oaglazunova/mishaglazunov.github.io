@@ -51,6 +51,17 @@ h6 {
 	box-sizing: border-box;
 }
 
+section {
+	max-width: 900px;
+	/* min-width： 360px */
+	@media (min-width: 640px) {
+		border: 1px solid red;
+	}
+
+	@media (min-width: 1007px) {
+	}
+}
+
 h1 {
 	margin-top: 0;
 	font-size: 96px;
@@ -96,6 +107,10 @@ h4 {
 
 li {
 	list-style-type: square;
+
+	/* &::before {
+		content: "⮞";
+	}*/
 }
 
 a {

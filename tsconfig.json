@@ -1,19 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "types": ["node", "jest"],
-    "module": "commonjs",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "jsx": "react",
-    "noImplicitAny": false,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "outDir": "build",
-    "pretty": true,
-    "strictNullChecks": true,
-    "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types"]
-  }
+	"compilerOptions": {
+		"target": "es5",
+		"types": ["node", "jest"],
+		"module": "commonjs",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"jsx": "react",
+		"noImplicitAny": false,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"outDir": "build",
+		"pretty": true,
+		"strictNullChecks": true,
+		"baseUrl": ".",
+		"typeRoots": ["./node_modules/@types"]
+	}
 }

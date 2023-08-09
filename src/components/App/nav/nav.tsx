@@ -25,13 +25,6 @@ export default class Nav extends PureComponent<TNavProps> {
 				<a href="#about-me" className={css.link} onClick={toggleActiveLink}>
 					<span>About me</span>
 				</a>
-				<a
-					href="#additional-info"
-					className={css.link}
-					onClick={toggleActiveLink}
-				>
-					<span>Additional info</span>
-				</a>
 				<a href="#resume" className={css.link} onClick={toggleActiveLink}>
 					<span>Resume</span>
 				</a>

@@ -1,2 +1,8 @@
 .container {
+	/* text-align: center; */
+}
+
+.wrapper {
+	display: flex;
+	/* text-align: left; */
 }

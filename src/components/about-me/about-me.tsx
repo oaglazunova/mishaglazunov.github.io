@@ -15,21 +15,29 @@ export default class AboutMe extends PureComponent {
 	render() {
 		return (
 			<section className={css.container} id="about-me">
-				<h2>About me</h2>
-				<span>PhD Candidate</span>
+				<h2>About</h2>
+				<h3>Data Scientist</h3>
 				<ul className={css.list}>
-					<li>CV: [PDF]</li>
 					<li>
-						Website:{" "}
+						<span className={css.infoTitle}>CV:</span>{" "}
+						<a href="blabla.pdf" target="_blank">
+							[PDF]
+						</a>
+					</li>
+					<li>
+						<span className={css.infoTitle}>Website:</span>{" "}
 						<a href="mishaglazunov.github.io">mishaglazunov.github.io</a>
 					</li>
 					<li>
-						Email:{" "}
+						<span className={css.infoTitle}>Email:</span>{" "}
 						<a href="mailto:mikhail.glazunoff@gmail.com">
 							mikhail.glazunoff@gmail.com
 						</a>
 					</li>
-					<li>City: Maastricht, the Netherlands</li>
+					<li>
+						<span className={css.infoTitle}>City:</span> Maastricht, the
+						Netherlands
+					</li>
 
 					{data.map(this.renderItems)}
 				</ul>

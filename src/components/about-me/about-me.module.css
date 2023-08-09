@@ -1,6 +1,19 @@
 .container {
 }
 
-.container svg {
+.list {
+	columns: 2;
+}
+
+.list li {
+	margin-bottom: 15px;
+}
+
+.list svg {
 	height: 20px;
+	margin-bottom: -4px;
+}
+
+.infoTitle {
+	font-weight: bold;
 }

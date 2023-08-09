@@ -12,18 +12,20 @@ export default class Resume extends PureComponent {
 			<section className={css.container} id="resume">
 				<h2>Resume</h2>
 
-				<div>
-					<h3>Education</h3>
-					{education.map(this.renderTimeline)}
+				<div className={css.wrapper}>
+					<div className={css.column}>
+						<h3>Education</h3>
+						{education.map(this.renderTimeline)}
+					</div>
+
+					<div className={css.column}>
+						<h3>Experience</h3>
+						<Timeline />
+					</div>
 				</div>
 
-				<div>
-					<h3>Experience</h3>
-					<Timeline />
-				</div>
-
-				<button className="button  button-primary">Download CV</button>
-				<button className="button  button-secondary">Download CV</button>
+				{/* <button className="button  button-primary">Download CV</button>
+				<button className="button  button-secondary">Download CV</button> */}
 			</section>
 		);
 	}

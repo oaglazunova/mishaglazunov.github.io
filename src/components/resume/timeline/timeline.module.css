@@ -1,6 +1,4 @@
 .container {
-	border: 1px solid red;
-
 	--bullet-radius: 10px;
 	--left-padding: 20px;
 
